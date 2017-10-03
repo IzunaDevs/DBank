@@ -99,3 +99,7 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# zsh
+.temp.git
+.temp.pylint
