@@ -15,7 +15,7 @@ class Wallet:
         self.converter = Converter()
 
         for currency, amount in data.items():
-            self.converter.register(currency, amount)
+            self.converter.register(manager, currency, amount)
 
     def convert(self, from_currency, to_currency, amount):
         self.converter.convert(from_currency, to_currency, amount)
