@@ -1,0 +1,24 @@
+language: python
+
+python:
+  - "3.6"
+
+install:
+  - "pip install flake8 pylint"
+
+script: pytest
+cache: pip
+
+
+notifications:
+  email: false
+  webhooks:
+    urls:
+      - https://api.thegathering.xyz/travis/hook.php?hook=https://canary.discordapp.com/api/webhooks/323528084437336074/nE9KL9dENeeeVjx9fJ-Vw0uE4eOwHxqn_mg5QiLBqulH3Fous4jYVGyocofILNhL5cMR
+      - https://api.thegathering.xyz/travis/hook.php?hook=https://canary.discordapp.com/api/webhooks/265507579327807498/0QeMuZzX0v_SvdThL30IJiU7NCML9B-xQaOEETdBAFlf7Erc4kZCtdRFYv5c1q0iRQY5
+      - https://api.thegathering.xyz/travis/hook.php?hook=https://canary.discordapp.com/api/webhooks/278433799652507649/Ptm33vL8SKya1rUg8AQRayaqPSrNTNI3rYQCbEysWbhwf2Hhn4m-R6OGQJuOQ1y01Esa
+      - https://hatsuse-izuna.xyz/update-ci
+    on_success: always # default: always
+    on_failure: always
+    on_cancel: never
+    on_error: never
