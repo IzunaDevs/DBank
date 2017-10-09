@@ -1,6 +1,3 @@
-from rates import Converter
-
-
 class User:
     def __init__(self, manager, id: int):
         self.id = id
@@ -12,10 +9,7 @@ class Wallet:
         data = data or {}
 
         self.id = user.id
-        self.converter = Converter()
-
-        for currency, amount in data.items():
-            self.converter.register(manager, currency, amount)
+        self.data = data
 
     def convert(self, from_currency, to_currency, amount):
         self.converter.convert(from_currency, to_currency, amount)

@@ -1,4 +1,3 @@
-import os
 import subprocess
 import re
 
@@ -25,7 +24,7 @@ def test_pylint():
                              "too-few-public-methods,"
                              "too-many-locals,too-many-arguments,"
                              "too-many-statements,no-member,unused-argument,"
-                             " .").split(),
+                             " main.py core").split(),
                             stdout=subprocess.PIPE,
                             stderr=subprocess.PIPE)
 
